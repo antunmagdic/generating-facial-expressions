@@ -29,15 +29,30 @@ images).
 Training was performed using Adam optimizer \cite{kingma2014} with 
 $\beta_1 = 0.5$ and $\beta_2 = 0.999$. We train our model with learning rate
 0.0001 for 400 epochs. Batch size is set to 8. Training execution time was 
-roughly 1 day on NVIDIA Tesla T4 GPU. \ref{fig:multiple}
+roughly 1 day on NVIDIA Tesla T4 GPU.
 
 Gradual improvement of desired facial expressions can be seen throughout epochs.
 After 100 epochs, there are only slight changes which are prevalent in the mouth
 area. Visible lines, which remind of moustache, appear around the mouth since it
 is where facial expressions most differ. By the 400th epoch, modifications are 
 more obvious and the desired emotions more easily recognizable. Changes involve 
-several facial areas, including eyebrows, eyes, etc. \ref{fig:epochs}
+several facial areas, including eyebrows, eyes, etc.
 
 Pronounced changes are visible on more expressive emotions such as
 happiness, anger and surprise while changes on sad faces are somewhat less
 apparent. 
+
+The images in figure \ref{fig:multiple} show the results obtained after 400 
+epochs. Emotions are presented in this order: neutral (used as input images), 
+angry, happy, sad, and surprised. It is easy to see that the differences between
+images with emotions of anger and happiness are much more pronounced than the 
+differences between images with emotions of anger and sadness. Also one can 
+easily notice the mentioned changes around the mouth area and additionally the 
+changes in the eyebrow area.
+
+Figure \ref{fig:epochs} shows changes through the epochs. The first row shows 
+the results after 100 epochs. It is not possible to see certain changes between
+emotions on these results. The second row shows the results after 200 epochs. 
+The biggest change in these results is visible in the image showing happiness. 
+Only after 400 completed epochs changes are visible on other parts of the face 
+and other emotions are recognisable.
