@@ -1,3 +1,35 @@
 \section{Related Work}
 
-Related work...
+Generating a particular person’s face with different facial expressions can be 
+used in a variety of applications, including face recognition 
+\cite{cao2018}, \cite{parkhi2015}, face verification 
+\cite{sun2014}, \cite{taigman2014}, emotion prediction, 
+expression database generation, facial expression augmentation and 
+entertainment.
+ 
+Generative Adversarial Networks (GANs) are a powerful class of generative models
+based on game theory. A typical GAN optimization scheme consists in 
+simultaneously training a generator network to produce realistic fake samples 
+and a discriminator network trained to distinguish between real and fake data. 
+This idea is embedded by the so-called adversarial loss \cite{pumarola2020}.
+ 
+DCGANs are generative convolutional networks based off of GANs. Based on work 
+\cite{suit}, DCGANs seem promising. Using them it is possible to reconstruct the
+original image with great accuracy. However, it is also shown that the network 
+has not learned to modify the image.
+ 
+According to the article \cite{pumarola2020}, the GANimation (Anatomically 
+Consistent Facial Animation) proposed additionally controlled generated 
+expressions by Action Units labels, and allowed a continuous expression 
+transformation. The authors introduced an attention-based generator to promote 
+the robustness of their model for distracting backgrounds and illuminations.
+ 
+In some related work \cite{chen2018} it was used approach to construct double 
+encoder GAN. Double encoder GAN is used for facial expression synthesis to 
+extract the latent vectors and conditional labels features of the real image.
+ 
+Recent advances in GANs have shown impressive results for task of facial 
+expression synthesis. The most successful architecture is StarGAN \cite{choi2018}, that 
+conditions GANs' generation process with images of a specific domain, namely a 
+set of images of persons sharing the same expression \cite{pumarola2018}. In our
+work we have based precisely on this approach.
